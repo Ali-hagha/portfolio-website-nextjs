@@ -12,6 +12,12 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-poppins)', ...fontFamily.sans],
       },
+      colors: {
+        'nuetral-dark': '#1c3535',
+        'nuetral-light': '#faf7ff',
+        primary: '#402BCA',
+        'primary-dark': '#2B1D87',
+      },
     },
   },
   plugins: [],
