@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Poppins } from 'next/font/google';
 import NavBar from '@/components/NavBar/NavBar';
+import { useState } from 'react';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -18,11 +19,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" sizes="32x32" type="image/png" href="/icon.png" />
       </Head>
-      <main
-        className={`${poppins.variable} font-sans text-nuetral-dark  max-w-screen-2xl mx-auto px-6 md:px-20 lg:px-36`}
-      >
+      <div className={`${poppins.variable} font-sans text-nuetral-dark `}>
         <NavBar />
-      </main>
+        <main className=" max-w-screen-2xl  mx-auto px-6 md:px-20 lg:px-36"></main>
+      </div>
     </>
   );
 }
