@@ -7,8 +7,8 @@ const SideDrawer = ({
     <div className="ease-out duration-200">
       <div
         className={`${
-          isSideDrawerActive ? 'opacity-100' : 'opacity-0'
-        } md:hidden inset-0 fixed bg-white/30 backdrop-blur-lg transition-opacity`}
+          isSideDrawerActive ? 'opacity-100 block' : 'opacity-0 hidden'
+        } md:hidden inset-0 fixed bg-white/30 backdrop-blur transition-opacity`}
       ></div>
       <aside
         className={`${
