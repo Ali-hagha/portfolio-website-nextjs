@@ -9,6 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundSize: {
+        'size-150': '150% 150%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-75': '75% 75%',
+      },
       fontFamily: {
         sans: ['var(--font-poppins)', ...fontFamily.sans],
       },
