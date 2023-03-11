@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import NavBar from '@/components/NavBar/NavBar';
 import { useState } from 'react';
 import Hero from '@/components/Hero/Hero';
+import SideDrawer from '@/components/NavBar/SideDrawer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -12,6 +13,8 @@ const poppins = Poppins({
 });
 
 export default function Home() {
+  const [isSideDrawerActive, setIsSideDrawerActive] = useState(true);
+
   return (
     <>
       <Head>
@@ -21,10 +24,24 @@ export default function Home() {
         <link rel="icon" sizes="32x32" type="image/png" href="/icon.png" />
       </Head>
       <div className={`${poppins.variable} font-sans text-nuetral-dark `}>
-        <NavBar />
-        <main className=" max-w-screen-2xl  mx-auto px-6 sm:px-10 md:px-16 lg:px-32 pt-28 sm:pt-24">
+        <NavBar
+          isSideDrawerActive={isSideDrawerActive}
+          setIsSideDrawerActive={setIsSideDrawerActive}
+        />
+        <main
+          className={`max-w-screen-2xl  mx-auto px-6 sm:px-10 md:px-16 lg:px-32 pt-28 sm:pt-24`}
+        >
+          <Hero />
+          <Hero />
+          <Hero />
+          <Hero />
+          <Hero />
           <Hero />
         </main>
+        <SideDrawer
+          isSideDrawerActive={isSideDrawerActive}
+          setIsSideDrawerActive={setIsSideDrawerActive}
+        />
       </div>
     </>
   );
