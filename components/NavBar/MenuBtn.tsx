@@ -7,7 +7,7 @@ type Props = {
 };
 const MenuBtn = ({ isSideDrawerActive, setIsSideDrawerActive }: Props) => {
   return (
-    <div className="md:hidden z-20">
+    <div className="md:hidden z-30">
       <button
         className="p-4 pb-0 -mr-4"
         onClick={() => setIsSideDrawerActive(prevState => !prevState)}

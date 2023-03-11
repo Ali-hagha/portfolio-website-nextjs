@@ -1,12 +1,14 @@
+import Image from 'next/image';
+
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col md:flex-row items-center content-center space-x-10">
-      <div className="flex-1 sm:mx-0 md:w-8/12 lg:w-7/12 max-w-xl">
+    <section className="w-full flex flex-col relative lg:static lg:flex-row items-center justify-between lg:space-x-10">
+      <div className="flex-1 lg:w-full lg:max-w-xl">
         <div className="mb-10 md:mb-12">
           <h1 className="text-base md:text-lg mb-4 md:mb-6 tracking-wide">
             Hi, my name is
           </h1>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary font-bold mb-2 sm:mb-3 md:mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-primary font-bold mb-2 sm:mb-3 md:mb-4">
             Ali Haghayegh
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-8 tracking-wide">
@@ -27,7 +29,14 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div></div>
+      <div className=" absolute self-end lg:self-auto lg:static opacity-5 lg:opacity-100 lg:w-4/12 xl:w-5/12 -z-50">
+        <Image
+          src={'/Coder.svg'}
+          alt={'Programmer illustration'}
+          height="450"
+          width="475"
+        />
+      </div>
     </section>
   );
 };

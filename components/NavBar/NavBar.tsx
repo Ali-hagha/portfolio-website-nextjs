@@ -26,7 +26,10 @@ const NavBar = () => {
           setIsSideDrawerActive={setIsSideDrawerActive}
         />
       </nav>
-      <SideDrawer isSideDrawerActive={isSideDrawerActive} />
+      <SideDrawer
+        isSideDrawerActive={isSideDrawerActive}
+        setIsSideDrawerActive={setIsSideDrawerActive}
+      />
     </header>
   );
 };
