@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Dispatch, SetStateAction, useEffect } from 'react';
+import DrawerNavItem from './DrawerNavItem';
 
 type props = {
   isSideDrawerActive: boolean;
@@ -31,35 +32,14 @@ const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
       >
         <nav className="-mt-20">
           <ul className="flex flex-col gap-10 items-center justify-center">
-            <li className="">
-              <div className="relative">
-                <Link
-                  href={'#about'}
-                  className="text-white after:transition-transform after:absolute after:w-full after:bottom-0 after:left-0  after:h-[2px] after:bg-white after:scale-x-0 hover:after:origin-left after:origin-right hover:after:scale-x-100 py-3 px-4 text-lg "
-                >
-                  ABOUT
-                </Link>
-              </div>
+            <li>
+              <DrawerNavItem location={'#about'}>ABOUT</DrawerNavItem>
             </li>
             <li>
-              <div className="relative">
-                <Link
-                  href={'#mywork'}
-                  className="text-white after:transition-transform after:absolute after:w-full after:bottom-0 after:left-0  after:h-[2px] after:bg-white after:scale-x-0 hover:after:origin-left after:origin-right hover:after:scale-x-100 py-3 px-4 text-lg "
-                >
-                  MY WORK
-                </Link>
-              </div>
+              <DrawerNavItem location={'#mywork'}>MY WORK</DrawerNavItem>
             </li>
             <li>
-              <div className="relative">
-                <Link
-                  href={'#contact'}
-                  className="text-white after:transition-transform after:absolute after:w-full after:bottom-0 after:left-0  after:h-[2px] after:bg-white after:scale-x-0 hover:after:origin-left after:origin-right hover:after:scale-x-100 py-3 px-4 text-lg "
-                >
-                  CONTACT
-                </Link>
-              </div>
+              <DrawerNavItem location={'#contact'}>CONTACT</DrawerNavItem>
             </li>
           </ul>
         </nav>

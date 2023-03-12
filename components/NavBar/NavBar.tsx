@@ -11,7 +11,7 @@ type props = {
 
 const NavBar = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
   return (
-    <header className="relative  max-w-screen-2xl   mx-auto px-6 md:px-20 lg:px-36 overflow-x-hidden">
+    <header className="relative  mx-auto px-6 sm:px-10 md:px-16 lg:px-32 overflow-x-hidden">
       <nav className="flex flex-row justify-between items-end ">
         <Link href={'/'}>
           <Image
