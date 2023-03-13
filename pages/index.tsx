@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar/NavBar';
 import { useState } from 'react';
 import Hero from '@/components/Hero/Hero';
 import SideDrawer from '@/components/SideDrawer/SideDrawer';
+import About from '@/components/About/About';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function Home() {
           className={`max-w-screen-2xl  mx-auto px-6 sm:px-10 md:px-16 lg:px-32`}
         >
           <Hero />
+          <About />
         </main>
         <SideDrawer
           isSideDrawerActive={isSideDrawerActive}

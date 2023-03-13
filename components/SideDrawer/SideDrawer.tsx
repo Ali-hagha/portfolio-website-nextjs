@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { Dispatch, SetStateAction, useEffect } from 'react';
+import DrawerMenuBtn from './DrawerMenuBtn';
 import DrawerNavItem from './DrawerNavItem';
 
 type props = {
@@ -28,8 +28,12 @@ const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
       <aside
         className={`${
           isSideDrawerActive ? 'translate-x-0' : 'translate-x-96'
-        } md:hidden h-screen w-[min(75%,384px)] bg-primary fixed top-0 right-0 bottom-0 transition-transform z-20  flex flex-col items-center justify-center shadow-2xl`}
+        } md:hidden  w-[min(75%,384px)] bg-primary fixed top-0 right-0 bottom-0 transition-transform z-20  flex flex-col items-center justify-center shadow-2xl`}
       >
+        <DrawerMenuBtn
+          isSideDrawerActive={isSideDrawerActive}
+          setIsSideDrawerActive={setIsSideDrawerActive}
+        />
         <nav className="-mt-20">
           <ul className="flex flex-col gap-10 items-center justify-center">
             <li>
