@@ -1,7 +1,8 @@
-import { Dispatch, SetStateAction, useEffect } from 'react';
+import { Dispatch, Fragment, SetStateAction, useEffect } from 'react';
 import DrawerMenuBtn from './DrawerMenuBtn';
-import DrawerNavItem from './DrawerNavItem';
 import { Transition } from '@headlessui/react';
+import Backdrop from './Backdrop';
+import DrawerNavItemGroup from './DrawerNavItemGroup';
 
 type props = {
   isSideDrawerActive: boolean;
@@ -9,6 +10,7 @@ type props = {
 };
 
 const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
+  // hide overflow on body when sidedrawer is open to stop scrolling
   useEffect(() => {
     if (isSideDrawerActive) document.body.classList.add('overflow-hidden');
     if (!isSideDrawerActive) document.body.classList.remove('overflow-hidden');
@@ -19,44 +21,32 @@ const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
   }, [isSideDrawerActive]);
 
   return (
-    <Transition
-      show={isSideDrawerActive}
-      enter="duration-300 transition transform"
-      enterFrom="opacity-0"
-      enterTo="opacity-100"
-      leave="transition transform duration-300"
-      leaveFrom="opacity-100"
-      leaveTo="opacity-0"
-      unmount={false}
-    >
-      <div>
-        <div
-          className={`md:hidden inset-0 fixed bg-white/30 backdrop-blur z-10`}
-          onClick={() => setIsSideDrawerActive(false)}
-        ></div>
+    <div className="md:hidden">
+      <Backdrop
+        isSideDrawerActive={isSideDrawerActive}
+        setIsSideDrawerActive={setIsSideDrawerActive}
+      />
+      <Transition
+        show={isSideDrawerActive}
+        enter="duration-200 transition-transform"
+        enterFrom="translate-x-96"
+        enterTo="translate-x-0"
+        leave="transition-transform duration-200"
+        leaveFrom="translate-x-0"
+        leaveTo="translate-x-96"
+        as={Fragment}
+      >
         <aside
-          className={` md:hidden  w-[min(75%,384px)] bg-primary fixed top-0 bottom-0 z-20  flex flex-col items-center justify-center shadow-2xl`}
+          className={`w-[min(75%,384px)]  bg-primary fixed top-0 right-0 bottom-0 z-20  flex flex-col items-center justify-center shadow-2xl`}
         >
           <DrawerMenuBtn
             isSideDrawerActive={isSideDrawerActive}
             setIsSideDrawerActive={setIsSideDrawerActive}
           />
-          <nav className="-mt-20">
-            <ul className="flex flex-col gap-10 items-center justify-center">
-              <li>
-                <DrawerNavItem location={'#about'}>ABOUT</DrawerNavItem>
-              </li>
-              <li>
-                <DrawerNavItem location={'#mywork'}>MY WORK</DrawerNavItem>
-              </li>
-              <li>
-                <DrawerNavItem location={'#contact'}>CONTACT</DrawerNavItem>
-              </li>
-            </ul>
-          </nav>
+          <DrawerNavItemGroup />
         </aside>
-      </div>
-    </Transition>
+      </Transition>
+    </div>
   );
 };
 
