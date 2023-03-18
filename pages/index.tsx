@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Hero from '@/components/Hero/Hero';
 import SideDrawer from '@/components/SideDrawer/SideDrawer';
 import About from '@/components/About/About';
+import Projects from '@/components/Projects/Projects';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function Home() {
         >
           <Hero />
           <About />
+          <Projects />
         </main>
         <SideDrawer
           isSideDrawerActive={isSideDrawerActive}

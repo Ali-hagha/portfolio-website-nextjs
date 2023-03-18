@@ -24,6 +24,7 @@ module.exports = {
         'nuetral-light': '#faf7ff',
         primary: '#402BCA',
         'primary-dark': '#2B1D87',
+        card: '#f0eefb',
       },
     },
   },
