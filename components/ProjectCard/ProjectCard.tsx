@@ -6,9 +6,9 @@ import Link from 'next/link';
 const ProjectCard = () => {
   return (
     <div className="mb-8 md:mb-16 flex flex-col xl:flex-row rounded-2xl bg-card p-5 shadow-2xl shadow-primary/20 xl:space-x-8 max-w-6xl">
-      <div className="flex items-center justify-center rounded-xl overflow-hidden w-auto max-h-80 xl:w-[500px] shrink-0 mb-8 xl:mb-0">
+      <div className=" flex items-center justify-center rounded-xl overflow-hidden w-auto max-h-80 xl:w-[500px] shrink-0 mb-8 xl:mb-0">
         <Image
-          className=" object-cover h-full w-full"
+          className=" object-cover h-full w-full "
           src="https://dummyimage.com/960x600/5853e6/fff"
           alt="project image"
           width={'960'}
