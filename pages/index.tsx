@@ -6,6 +6,7 @@ import Hero from '@/components/sections/Hero/Hero';
 import SideDrawer from '@/components/ui/SideDrawer/SideDrawer';
 import About from '@/components/sections/About/About';
 import Projects from '@/components/sections/Projects/Projects';
+import Footer from '@/components/sections/Footer/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function Home() {
           <About />
           <Projects />
         </main>
+        <Footer />
         <SideDrawer
           isSideDrawerActive={isSideDrawerActive}
           setIsSideDrawerActive={setIsSideDrawerActive}

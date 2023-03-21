@@ -28,7 +28,7 @@ const ProjectCard = () => {
             Tech I used:
           </h3>
 
-          <ul className="mb-8 text-sm lg:text-base flex flex-row flex-wrap gap-x-8 text-nuetral-dark/90">
+          <ul className="mb-8 text-sm lg:text-base font-light tracking-wide flex flex-row flex-wrap gap-x-8 text-nuetral-dark/90">
             <li>Typescript</li>
             <li>Tailwind</li>
             <li>React query</li>
