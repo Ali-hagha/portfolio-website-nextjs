@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col relative lg:flex-row items-center justify-center lg:justify-between lg:space-x-10 min-h-screen">
+    <section className="w-full flex flex-col relative lg:flex-row items-center justify-center lg:justify-between lg:space-x-10 min-h-screen py-20 md:py-24 ">
       <div className="lg:flex-1 lg:w-full lg:max-w-xl">
         <div className="mb-10 md:mb-12">
-          <h1 className="text-base md:text-lg mb-4 md:mb-6 tracking-wide">
+          <h1 className="text-base md:text-lg mb-4 md:mb-6 tracking-wide pt-4">
             Hi, my name is
           </h1>
           <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-primary font-bold mb-2 sm:mb-3 md:mb-4">

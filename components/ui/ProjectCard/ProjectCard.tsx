@@ -18,7 +18,7 @@ const ProjectCard = () => {
       <div className="flex flex-col justify-between">
         <div>
           <h2 className="mb-3 text-xl md:text-2xl font-bold">Todoist Clone</h2>
-          <p className="mb-4 text-base md:text-lg leading-relaxed tracking-wide ">
+          <p className="mb-4 text-base lg:text-lg leading-relaxed tracking-wide ">
             This is a clone of todoist the popular task management app. It is a
             CRUD app i created using react for the frontend and a PostgreSQL
             database for the backend. divide your tasks into projects and add
@@ -28,7 +28,7 @@ const ProjectCard = () => {
             Tech I used:
           </h3>
 
-          <ul className="mb-8 text-sm md:text-base flex flex-row flex-wrap gap-x-8 text-nuetral-dark/90">
+          <ul className="mb-8 text-sm lg:text-base flex flex-row flex-wrap gap-x-8 text-nuetral-dark/90">
             <li>Typescript</li>
             <li>Tailwind</li>
             <li>React query</li>
