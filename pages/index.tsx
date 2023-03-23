@@ -7,6 +7,7 @@ import SideDrawer from '@/components/ui/SideDrawer/SideDrawer';
 import About from '@/components/sections/About/About';
 import Projects from '@/components/sections/Projects/Projects';
 import Footer from '@/components/sections/Footer/Footer';
+import Contact from '@/components/sections/Contact/Contact';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function Home() {
           <Hero />
           <About />
           <Projects />
+          <Contact />
         </main>
         <Footer />
         <SideDrawer

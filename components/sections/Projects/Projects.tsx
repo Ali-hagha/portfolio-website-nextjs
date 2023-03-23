@@ -2,7 +2,7 @@ import ProjectCard from '../../ui/ProjectCard/ProjectCard';
 
 const Projects = () => {
   return (
-    <section className="">
+    <section className="mb-2- md:mb-32 ">
       <h2 className="text-3xl font-bold mb-12 max-w-6xl mx-auto">
         {"Some Things I'v Built"}
       </h2>
