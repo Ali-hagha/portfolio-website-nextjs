@@ -9,7 +9,7 @@ const NavGroup = () => {
           <NavItem location="#about">ABOUT</NavItem>
         </li>
         <li>
-          <NavItem location="#mywork">MY WORK</NavItem>
+          <NavItem location="#projects">MY WORK</NavItem>
         </li>
         <li>
           <NavItem location="#contact">CONTACT</NavItem>

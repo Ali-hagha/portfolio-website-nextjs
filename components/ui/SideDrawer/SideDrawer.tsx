@@ -3,6 +3,7 @@ import DrawerMenuBtn from './DrawerMenuBtn';
 import { Transition } from '@headlessui/react';
 import Backdrop from './Backdrop';
 import DrawerNavItemGroup from './DrawerNavItemGroup';
+import DrawerNavItem from './DrawerNavItem';
 
 type props = {
   isSideDrawerActive: boolean;
@@ -19,6 +20,10 @@ const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
       document.body.classList.remove('overflow-hidden');
     };
   }, [isSideDrawerActive]);
+
+  const onCLickItem = () => {
+    setIsSideDrawerActive(false);
+  };
 
   return (
     <div className="md:hidden">
@@ -43,7 +48,17 @@ const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
             isSideDrawerActive={isSideDrawerActive}
             setIsSideDrawerActive={setIsSideDrawerActive}
           />
-          <DrawerNavItemGroup />
+          <DrawerNavItemGroup>
+            <DrawerNavItem onClick={onCLickItem} location={'#about'}>
+              ABOUT
+            </DrawerNavItem>
+            <DrawerNavItem onClick={onCLickItem} location={'#projects'}>
+              MY WORK
+            </DrawerNavItem>
+            <DrawerNavItem onClick={onCLickItem} location={'#contact'}>
+              CONTACT
+            </DrawerNavItem>
+          </DrawerNavItemGroup>
         </aside>
       </Transition>
     </div>

@@ -1,18 +1,10 @@
-import DrawerNavItem from './DrawerNavItem';
+import { ReactNode } from 'react';
 
-const DrawerNavItemGroup = () => {
+const DrawerNavItemGroup = ({ children }: { children: ReactNode }) => {
   return (
     <nav className="-mt-20">
       <ul className="flex flex-col gap-10 items-center justify-center">
-        <li>
-          <DrawerNavItem location={'#about'}>ABOUT</DrawerNavItem>
-        </li>
-        <li>
-          <DrawerNavItem location={'#mywork'}>MY WORK</DrawerNavItem>
-        </li>
-        <li>
-          <DrawerNavItem location={'#contact'}>CONTACT</DrawerNavItem>
-        </li>
+        {children}
       </ul>
     </nav>
   );

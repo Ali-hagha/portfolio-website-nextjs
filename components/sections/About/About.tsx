@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mb-48 flex flex-col lg:flex-row items-center h-full"
+      className="mb-48 flex flex-col lg:flex-row items-center h-full scroll-mt-24 md:scroll-mt-32 "
     >
       <div className="flex flex-col relative h-56 sm:h-80 lg:h-auto  w-screen  items-center justify-center mb-4 md:mb-8 lg:mb-0 lg:mr-8 lg:flex-1 lg:self-stretch">
         <div className="flex flex-col items-center justify-center lg:self-stretch">
