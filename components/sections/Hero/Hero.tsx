@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -21,12 +22,19 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex flex-row ">
-          <button className="rounded-lg py-3 md:py-4 px-6 md:px-12 bg-primary text-white font-medium text-lg md:text-xl mr-4 md:mr-10 hover:bg-primary-dark active:bg-primary-dark transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+          <Link
+            href={'mailto:ali.haghayegh@gmail.com'}
+            className="rounded-lg py-3 md:py-4 px-6 md:px-12 bg-primary text-white font-medium text-lg md:text-xl mr-4 md:mr-10 hover:bg-primary-dark active:bg-primary-dark transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
             Hire Me ✌️
-          </button>
-          <button className="rounded-lg py-3 md:py-4 px-6 md:px-12 font-medium text-lg md:text-xl text-primary hover:ring ring-primary active:ring ring-inset  transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+          </Link>
+          <Link
+            href={'#projects'}
+            scroll={false}
+            className="rounded-lg py-3 md:py-4 px-6 md:px-12 font-medium text-lg md:text-xl text-primary hover:ring ring-primary active:ring ring-inset  transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
             My Work
-          </button>
+          </Link>
         </div>
       </div>
       <div className=" absolute self-end lg:self-auto lg:static opacity-5 lg:opacity-100 lg:w-4/12 xl:w-5/12 -z-50">
