@@ -7,6 +7,7 @@ import DrawerNavItem from './DrawerNavItem';
 import Link from 'next/link';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { TbBrandTelegram } from 'react-icons/tb';
+import SocialLinkGroup from '../SocialLinkGroup/SocialLinkGroup';
 
 type props = {
   isSideDrawerActive: boolean;
@@ -62,26 +63,7 @@ const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
               CONTACT
             </DrawerNavItem>
           </DrawerNavItemGroup>
-          <div className="flex flex-row absolute bottom-10 items-center justify-center space-x-10 md:space-x-16 text-2xl text-white ">
-            <Link
-              href={'https://www.linkedin.com/in/ali-haghayegh-172a331a5/#'}
-              className="p-2 inline-block hover:text-[#fff30a]  transition-all hover:-translate-y-1"
-            >
-              <FiLinkedin />
-            </Link>
-            <Link
-              href={'https://github.com/Ali-hagha'}
-              className="p-2 inline-block hover:text-[#fff30a]  transition-all hover:-translate-y-1"
-            >
-              <FiGithub />
-            </Link>
-            <Link
-              href={'https://t.me/Ali_hagha'}
-              className="p-2 inline-block hover:text-[#fff30a]  transition-all hover:-translate-y-1 "
-            >
-              <TbBrandTelegram />
-            </Link>
-          </div>
+          <SocialLinkGroup classes="absolute bottom-10" />
         </aside>
       </Transition>
     </div>
