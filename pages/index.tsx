@@ -8,6 +8,10 @@ import About from '@/components/sections/About/About';
 import Projects from '@/components/sections/Projects/Projects';
 import Footer from '@/components/sections/Footer/Footer';
 import Contact from '@/components/sections/Contact/Contact';
+import { GetStaticProps } from 'next';
+import path from 'path';
+import { promises as fs } from 'fs';
+import { Project } from '@/types/project';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,7 +20,11 @@ const poppins = Poppins({
   style: 'normal',
 });
 
-export default function Home() {
+interface Props {
+  projects: Project[];
+}
+
+export default function Home({ projects }: Props) {
   const [isSideDrawerActive, setIsSideDrawerActive] = useState(false);
 
   return (
@@ -37,7 +45,7 @@ export default function Home() {
         >
           <Hero />
           <About />
-          <Projects />
+          <Projects projects={projects} />
           <Contact />
         </main>
         <Footer />
@@ -49,3 +57,15 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<{
+  projects: Project[];
+}> = async () => {
+  const jsonDirectory = path.join(process.cwd(), 'json');
+  const jsonData = await fs.readFile(jsonDirectory + '/data.json', 'utf8');
+
+  const data = JSON.parse(jsonData);
+  const projects = data.projects;
+
+  return { props: { projects } };
+};

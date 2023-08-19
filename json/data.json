@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Pramega",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.",
+      "techStack": ["Typescript", "Next.js", "react", "Tailwind", "Strapi"],
+      "liveUrl": "https://liara.ir",
+      "repoUrl": "https://github.com",
+      "imagePath": "/projects/pramega.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Messenger",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.",
+      "techStack": ["Typescript", "react", "Tailwind", "Pocketbase"],
+      "liveUrl": "https://liara.ir",
+      "repoUrl": "https://github.com",
+      "imagePath": "/projects/messenger.png"
+    }
+  ]
+}

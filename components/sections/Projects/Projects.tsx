@@ -1,6 +1,11 @@
+import { Project } from '@/types/project';
 import ProjectCard from '../../ui/ProjectCard/ProjectCard';
 
-const Projects = () => {
+interface Props {
+  projects: Project[];
+}
+
+const Projects = ({ projects }: Props) => {
   return (
     <section
       id="projects"
@@ -10,11 +15,9 @@ const Projects = () => {
         {"Some Things I'v Built"}
       </h2>
       <div className="grid justify-items-center gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-1">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects.map(project => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </section>
   );
