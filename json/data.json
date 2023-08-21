@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Pramega",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.",
+      "description": "an ecommerce app developed with Next.js and powered by Strapi. With a focus on seamless user experience, it ensures smooth product exploration, efficient cart management, and rapid responsiveness.",
       "techStack": ["Typescript", "Next.js", "react", "Tailwind", "Strapi"],
       "liveUrl": "https://liara.ir",
       "repoUrl": "https://github.com",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "title": "Messenger",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.",
+      "description": "a real-time chat application meticulously developed using React for the frontend and powered by Pocketbase on the backend. Seamlessly facilitating dynamic conversations, swift updates, and an intuitive interface. ",
       "techStack": ["Typescript", "react", "Tailwind", "Pocketbase"],
       "liveUrl": "https://liara.ir",
       "repoUrl": "https://github.com",
