@@ -9,9 +9,8 @@ import Projects from '@/components/sections/Projects/Projects';
 import Footer from '@/components/sections/Footer/Footer';
 import Contact from '@/components/sections/Contact/Contact';
 import { GetStaticProps } from 'next';
-import path from 'path';
-import { promises as fs } from 'fs';
 import { Project } from '@/types/project';
+import getProjects from '@/actions/getProjects';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -61,11 +60,7 @@ export default function Home({ projects }: Props) {
 export const getStaticProps: GetStaticProps<{
   projects: Project[];
 }> = async () => {
-  const jsonDirectory = path.join(process.cwd(), 'json');
-  const jsonData = await fs.readFile(jsonDirectory + '/data.json', 'utf8');
-
-  const data = JSON.parse(jsonData);
-  const projects = data.projects;
+  const projects = await getProjects();
 
   return { props: { projects } };
 };
