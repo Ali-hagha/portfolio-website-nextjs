@@ -25,6 +25,7 @@ module.exports = {
         primary: '#402BCA',
         'primary-dark': '#2B1D87',
         card: '#EBE8FA',
+        secondary: '#fff30a',
       },
     },
   },
