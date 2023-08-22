@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Dispatch, Fragment, SetStateAction, useState } from 'react';
 import MenuBtn from './MenuBtn';
 import NavGroup from './NavGroup';
+import { cn } from '@/lib/utils';
+import clsx from 'clsx';
 
 type props = {
   isSideDrawerActive: boolean;
@@ -13,6 +15,7 @@ type props = {
 
 const NavBar = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
   const [visible, isScrolled] = useNavbarVisibility();
+  const [loading, setLoading] = useState(true);
 
   return (
     <Transition
@@ -27,28 +30,34 @@ const NavBar = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
       as={Fragment}
     >
       <header
-        className={`fixed z-10 top-0 left-0 right-0 mx-auto overflow-x-hidden flex flex-row items-end justify-between  bg-white/60 pb-2  px-6 sm:px-10 md:px-16 lg:px-32 backdrop-blur-xl transition-all ${
-          isScrolled ? 'shadow-primary/10 shadow-lg  pt-0' : 'pt-2'
-        }`}
+        onClick={() => {
+          setLoading(state => !state);
+        }}
+        className={`fixed z-10 top-0 left-0 right-0 mx-auto bg-white/60 backdrop-blur-xl`}
       >
-        <nav className="flex grow flex-row justify-between items-end">
-          <Link href={'/'} className="">
-            <Image
-              src={'/Logo.svg'}
-              alt={'logo'}
-              width={'100'}
-              height={'100'}
-              className={`h-16 w-16  md:w-20 md:h-20 transition-transform ${
-                isScrolled ? 'scale-90' : 'scale-100'
-              }`}
+        <div
+          className={cn(
+            `flex-1 pb-2 px-6 sm:px-10 md:px-16 lg:px-32 transition-all`,
+            isScrolled && 'shadow-primary/10 shadow-lg'
+          )}
+        >
+          <nav className="flex flex-row justify-between items-end">
+            <Link href={'/'}>
+              <Image
+                src={'/Logo.svg'}
+                alt={'logo'}
+                width={'100'}
+                height={'100'}
+                className={`h-16 w-16  md:w-20 md:h-20 transition-transform`}
+              />
+            </Link>
+            <NavGroup />
+            <MenuBtn
+              isSideDrawerActive={isSideDrawerActive}
+              setIsSideDrawerActive={setIsSideDrawerActive}
             />
-          </Link>
-          <NavGroup />
-          <MenuBtn
-            isSideDrawerActive={isSideDrawerActive}
-            setIsSideDrawerActive={setIsSideDrawerActive}
-          />
-        </nav>
+          </nav>
+        </div>
       </header>
     </Transition>
   );

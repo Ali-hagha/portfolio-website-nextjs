@@ -7,7 +7,7 @@ const useNavbarVisibility = (): [boolean, boolean] => {
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window !== 'undefined') {
-        const currentScrollPos = window.pageYOffset;
+        const currentScrollPos = window.scrollY;
         const visible = prevScrollPos > currentScrollPos;
         setVisible(visible);
         setPrevScrollPos(currentScrollPos);
@@ -21,7 +21,7 @@ const useNavbarVisibility = (): [boolean, boolean] => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
-  return [visible, prevScrollPos > 0];
+  return [visible, prevScrollPos > 10];
 };
 
 export default useNavbarVisibility;
