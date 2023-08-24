@@ -15,7 +15,6 @@ type props = {
 
 const NavBar = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
   const [visible, isScrolled] = useNavbarVisibility();
-  const [loading, setLoading] = useState(true);
 
   return (
     <Transition
@@ -30,9 +29,6 @@ const NavBar = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
       as={Fragment}
     >
       <header
-        onClick={() => {
-          setLoading(state => !state);
-        }}
         className={`fixed z-10 top-0 left-0 right-0 mx-auto bg-white/60 backdrop-blur-xl`}
       >
         <div
