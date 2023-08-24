@@ -1,6 +1,6 @@
 import { Variants } from 'framer-motion';
 
-export const fadeInFromBottomAnimationVariant: Variants = {
+export const fadeInFromBottomVariant: Variants = {
   initial: {
     opacity: 0,
     y: 40,
@@ -13,6 +13,23 @@ export const fadeInFromBottomAnimationVariant: Variants = {
       type: 'spring',
       bounce: 0,
       duration: 0.4,
+    },
+  },
+};
+
+export const fadeInFromBottomDelayVariant: Variants = {
+  initial: {
+    opacity: 0,
+    y: 60,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3,
+      type: 'spring',
+      bounce: 0,
+      duration: 0.5,
     },
   },
 };
