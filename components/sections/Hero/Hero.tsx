@@ -68,14 +68,16 @@ const Hero = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className=" absolute self-end lg:self-auto lg:static opacity-5 lg:opacity-100 lg:w-4/12 xl:w-5/12 -z-50"
+        className=" absolute self-end lg:self-auto lg:static  lg:w-4/12 xl:w-5/12 -z-50"
       >
-        <Image
-          src={'/Coder.svg'}
-          alt={'Programmer illustration'}
-          height="450"
-          width="475"
-        />
+        <div className="opacity-5 lg:opacity-100">
+          <Image
+            src={'/Coder.svg'}
+            alt={'Programmer illustration'}
+            height="450"
+            width="475"
+          />
+        </div>
       </motion.div>
     </section>
   );

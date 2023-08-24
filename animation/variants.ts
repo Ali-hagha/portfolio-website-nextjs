@@ -20,16 +20,16 @@ export const fadeInFromBottomVariant: Variants = {
 export const fadeInFromBottomDelayVariant: Variants = {
   initial: {
     opacity: 0,
-    y: 60,
+    y: 100,
   },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.3,
+      delay: 0.15,
       type: 'spring',
       bounce: 0,
-      duration: 0.5,
+      duration: 0.8,
     },
   },
 };
