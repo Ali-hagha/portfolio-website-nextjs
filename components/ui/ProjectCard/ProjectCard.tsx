@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { HiExternalLink } from 'react-icons/hi';
 import { FiGithub } from 'react-icons/fi';
-import Link from 'next/link';
 import { Project } from '@/types/project';
+import { motion } from 'framer-motion';
+import { fadeInFromBottomDelayVariant } from '@/animation/variants';
 
 interface Props {
   project: Project;
@@ -10,7 +11,13 @@ interface Props {
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <div className="mb-8 md:mb-16 flex flex-col xl:flex-row rounded-2xl bg-card p-5 shadow-2xl shadow-primary/20 xl:space-x-8 max-w-6xl">
+    <motion.div
+      variants={fadeInFromBottomDelayVariant}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className="mb-8 md:mb-16 flex flex-col xl:flex-row rounded-2xl bg-card p-5 shadow-2xl shadow-primary/20 xl:space-x-8 max-w-6xl"
+    >
       <div className=" flex items-center justify-center rounded-xl overflow-hidden w-auto max-h-80 xl:w-[500px] shrink-0 mb-8 xl:mb-0">
         <Image
           className=" object-cover h-full w-full "
@@ -56,7 +63,7 @@ const ProjectCard = ({ project }: Props) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import { TbDiamondsFilled } from 'react-icons/tb';
 import { motion } from 'framer-motion';
-import {
-  fadeInFromBottomDelayVariant,
-  fadeInFromBottomVariant,
-} from '@/animation/variants';
+import { fadeInFromBottomDelayVariant } from '@/animation/variants';
 
 const About = () => {
   return (
@@ -13,9 +10,6 @@ const About = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      transition={{
-        delay: 5,
-      }}
       id="about"
       className="mb-48 flex flex-col lg:flex-row items-center h-full scroll-mt-24 md:scroll-mt-32 "
     >
