@@ -30,7 +30,7 @@ const About = () => {
           height="1024"
           className="absolute right-0 left-0 scale-75 lg:scale-90 -z-40"
         />
-        <div className='bg-[url("/organic-pattern.svg")] absolute top-0 bottom-0 left-0 right-0 -z-50 bg-cover'></div>
+        <div className=" bg-pattern absolute top-0 bottom-0 left-0 right-0 -z-50 bg-cover"></div>
       </div>
       <div>
         <div className="text-base md:text-lg tracking-wide max-w-lg md:max-w-xl lg:max-w-lg xl:max-w-2xl leading-relaxed mb-4">

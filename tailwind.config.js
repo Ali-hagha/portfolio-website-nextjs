@@ -27,6 +27,9 @@ module.exports = {
         card: '#EBE8FA',
         secondary: '#fff30a',
       },
+      backgroundImage: {
+        pattern: "url('/organic-pattern.svg')",
+      },
     },
   },
   plugins: [],
