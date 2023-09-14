@@ -28,7 +28,7 @@ module.exports = {
         secondary: '#fff30a',
       },
       backgroundImage: {
-        pattern: "url('/organic-pattern.svg')",
+        pattern: "url('/pattern.svg')",
       },
     },
   },
