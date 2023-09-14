@@ -4,10 +4,9 @@ import { Transition } from '@headlessui/react';
 import Backdrop from './Backdrop';
 import DrawerNavItemGroup from './DrawerNavItemGroup';
 import DrawerNavItem from './DrawerNavItem';
-import Link from 'next/link';
-import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
 import { TbBrandTelegram } from 'react-icons/tb';
-import SocialLinkGroup from '../SocialLinkGroup/SocialLinkGroup';
+import SocialLink from '../SocialLinkGroup/SocialLink';
 
 type props = {
   isSideDrawerActive: boolean;
@@ -63,7 +62,21 @@ const SideDrawer = ({ isSideDrawerActive, setIsSideDrawerActive }: props) => {
               CONTACT
             </DrawerNavItem>
           </DrawerNavItemGroup>
-          <SocialLinkGroup classes="absolute bottom-10" />
+          <div
+            className={`flex flex-row items-center justify-center space-x-2 text-2xl text-white absolute bottom-10`}
+          >
+            <SocialLink
+              icon={FiLinkedin}
+              href={'https://www.linkedin.com/in/ali-haghayegh-172a331a5/#'}
+            />
+            <SocialLink icon={FiGithub} href={'https://github.com/Ali-hagha'} />
+            <SocialLink
+              icon={TbBrandTelegram}
+              href={'https://t.me/Ali_hagha'}
+            />
+            <SocialLink icon={FiMail} href={'mailto:ali.haghayegh@gmail.com'} />
+            <SocialLink icon={FiPhone} href={'tel:+989144160848'} />
+          </div>
         </aside>
       </Transition>
     </div>
