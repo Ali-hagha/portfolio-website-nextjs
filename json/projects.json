@@ -14,7 +14,7 @@
       "title": "Messenger",
       "description": "a real-time chat application meticulously developed using React for the frontend and powered by Pocketbase on the backend. Seamlessly facilitating dynamic conversations, swift updates, and an intuitive interface. ",
       "techStack": ["Typescript", "react", "Tailwind", "Pocketbase"],
-      "liveUrl": "https://fbmesssenger.vercel.app/",
+      "liveUrl": "https://fbmessenger.vercel.app/",
       "repoUrl": "https://github.com/Ali-hagha/messenger-clone-vite",
       "imagePath": "/projects/messenger.png"
     }
