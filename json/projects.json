@@ -5,7 +5,7 @@
       "title": "Pramega",
       "description": "an ecommerce app developed with Next.js and powered by Strapi. With a focus on seamless user experience, it ensures smooth product exploration, efficient cart management, and rapid responsiveness.",
       "techStack": ["Typescript", "Next.js", "react", "Tailwind", "Strapi"],
-      "liveUrl": "https://pramega.iran.liara.run/",
+      "liveUrl": "https://pramega.vercel.app/",
       "repoUrl": "https://github.com/Ali-hagha/pramega",
       "imagePath": "/projects/pramega.jpg"
     },
@@ -14,7 +14,7 @@
       "title": "Messenger",
       "description": "a real-time chat application meticulously developed using React for the frontend and powered by Pocketbase on the backend. Seamlessly facilitating dynamic conversations, swift updates, and an intuitive interface. ",
       "techStack": ["Typescript", "react", "Tailwind", "Pocketbase"],
-      "liveUrl": "https://my-messenger.iran.liara.run/",
+      "liveUrl": "https://fbmesssenger.vercel.app/",
       "repoUrl": "https://github.com/Ali-hagha/messenger-clone-vite",
       "imagePath": "/projects/messenger.png"
     }
