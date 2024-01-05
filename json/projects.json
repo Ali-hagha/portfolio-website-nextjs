@@ -17,6 +17,14 @@
       "liveUrl": "https://messenger.alihaghayegh.ir/",
       "repoUrl": "https://github.com/Ali-hagha/messenger-clone-vite",
       "imagePath": "/projects/messenger.png"
+    },
+    {
+      "id": 3,
+      "title": "Pramega app",
+      "description": "an ecommerce mobile app developed with React native and Expo and powered by Strapi, prioritizes a frictionless user experience. It facilitates effortless product discovery and streamlines cart management for optimal efficiency.",
+      "techStack": ["Typescript", "React Native", "Expo", "Strapi"],
+      "repoUrl": "https://github.com/Ali-hagha/pramega-app",
+      "imagePath": "/projects/pramega-app.jpg"
     }
   ]
 }

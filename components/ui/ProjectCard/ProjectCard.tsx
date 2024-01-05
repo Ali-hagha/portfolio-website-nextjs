@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import { HiExternalLink } from 'react-icons/hi';
-import { FiGithub } from 'react-icons/fi';
-import { Project } from '@/types/project';
-import { motion } from 'framer-motion';
-import { fadeInFromBottomDelayVariant } from '@/animation/variants';
+import Image from "next/image";
+import { HiExternalLink } from "react-icons/hi";
+import { FiGithub } from "react-icons/fi";
+import { Project } from "@/types/project";
+import { motion } from "framer-motion";
+import { fadeInFromBottomDelayVariant } from "@/animation/variants";
 
 interface Props {
   project: Project;
@@ -23,8 +23,8 @@ const ProjectCard = ({ project }: Props) => {
           className=" object-cover h-full w-full "
           src={project.imagePath}
           alt={project.title}
-          width={'960'}
-          height={'600'}
+          width={960}
+          height={600}
         />
       </div>
       <div className="flex flex-col justify-between">
@@ -40,20 +40,22 @@ const ProjectCard = ({ project }: Props) => {
           </h3>
 
           <ul className="mb-8 text-sm lg:text-base font-light tracking-wide flex flex-row flex-wrap gap-x-8 text-nuetral-dark/90">
-            {project.techStack.map(tech => (
+            {project.techStack.map((tech) => (
               <li key={tech}>{tech}</li>
             ))}
           </ul>
         </div>
         <div className="flex w-full justify-end">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            className="rounded-lg border-2 border-primary py-2 px-4 font-bold text-primary transition-all hover:shadow-[4px_4px_0px_0px_rgb(64,43,202)] hover:-translate-x-1 hover:-translate-y-1 mr-4"
-          >
-            Check it out
-            <HiExternalLink className="inline-block text-2xl ml-2 align-top" />
-          </a>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              className="rounded-lg border-2 border-primary py-2 px-4 font-bold text-primary transition-all hover:shadow-[4px_4px_0px_0px_rgb(64,43,202)] hover:-translate-x-1 hover:-translate-y-1 mr-4"
+            >
+              Check it out
+              <HiExternalLink className="inline-block text-2xl ml-2 align-top" />
+            </a>
+          )}
           <a
             href={project.repoUrl}
             target="_blank"
